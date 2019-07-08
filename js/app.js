@@ -288,7 +288,7 @@ for(let i = 0; i < bondFilms.length; i++){
 }
 console.log(bondTitles);
 
-// 6. Create a new array oddBonds, of only the Bond films released on odd-numbered years.
+//  6. Create a new array oddBonds, of only the Bond films released on odd-numbered years.
 
 const oddBonds = [];
 for(let i = 0; i < bondFilms.length; i++){
@@ -298,9 +298,41 @@ for(let i = 0; i < bondFilms.length; i++){
 }
 console.log(oddBonds);
 
-// Determine the total cumulative gross of the Bond franchise, and console.log the result.
-// Hint: To make the grosses into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into parseInt() also.
+//  Determine the total cumulative gross of the Bond franchise, and console.log the 
+//  result. Hint: To make the grosses into usable numbers, look into the .replace 
+//  Javascript method (there are many ways to do this, however). Look into parseInt() also.
 
-// Commit: "bond films gross"
+function grossStringWithOnlyNumbers(str){
+  numbersOnly = "";
+  for(let i = 0; i < str.length; i++){
+    if(str[i] !== "," && str[i] !== "$"){
+      let char = str[i];
+      numbersOnly +=char;
+    }
+  }
+  return numbersOnly
+}
+grossStringWithOnlyNumbers("$4,500");
+console.log(grossStringWithOnlyNumbers("$4,500"));
+
+
+let grossBondsCumulativeNum = 0;
+for(let i = 0; i < bondFilms.length; i++){
+  grossBondsCumulativeNum += Number(grossStringWithOnlyNumbers(bondFilms[i].gross));
+}
+console.log(grossBondsCumulativeNum);
+
+// ***for another day***
+// grossBondsCumulativeString = grossBondsCumulativeNum.toString();
+// let grossBondsCumulativeFormatted = "$";
+// let commaIndex = 4
+// for(let i = 0; i < grossBondsCumulativeString.length; i++){
+//   if(grossBondsCumulativeString.length -  === 0){
+//     grossBondsCumulativeFormatted +=`${grossBondsCumulativeString[i]},`;
+//   } else {
+//     grossBondsCumulativeFormatted +=grossBondsCumulativeString[i];
+//   }
+// }
+// console.log(grossBondsCumulativeFormatted);
 
 // Congrats! You have completed the homework
