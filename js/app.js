@@ -51,13 +51,33 @@
 //      location: "DEN",
 //      tvShows: []
 //    }
-// 🔴 Commit: "data types"
 
-// 2. Take it Easy
-// Make an array that holds all of the colors of the rainbow.
-// Write code that will access "blue" from the rainbow array.
-// Make an object that is called your name and holds the information about your favorite food, a hobby, the name of the town that you live in currently, and your favorite datatype.
-// Write code that will access your hobby from the object that you just created.
+//  2. Take it Easy
+//  Make an array that holds all of the colors of the rainbow.
+
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]; 
+
+//  Write code that will access "blue" from the rainbow array.
+
+console.log(rainbowColors[4]);
+
+//  Make an object that is called your name and holds the information 
+//  about your favorite food, a hobby, the name of the town that you 
+//  live in currently, and your favorite datatype.
+
+const Stacey = {
+  favFood: "Lavendar-infused gelato",
+  favHobby: "reading",
+  currentTown: "Greenwood Village",
+  favDatatype: "object",
+}
+console.log(Stacey);
+
+//  Write code that will access your hobby from the object that you 
+//  just created.
+
+console.log(Stacey.favHobby);
+
 // 🔴 Commit: "data structures"
 
 // 3. Crazy Object!
